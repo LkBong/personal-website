@@ -17,7 +17,7 @@ export const DATA = {
   description:
     "Mechanical Engineering student at Imperial College London. Building deployable deep-tech systems across robotics, power systems, and climate tech.",
   summary:
-    "Penultimate-year MEng Mechanical Engineering student at Imperial College London building across robotics, electronics, power systems, and climate tech. I interned at Imperial's [Electrochemical Engineering Group](https://www.linkedin.com/company/ese-imperial) working on lithium-ion battery research, conducted climate finance research at the [Centre for Climate Finance & Investment](https://www.imperial.ac.uk/business-school/faculty-research/research-centres/centre-climate-finance-investment/), and completed engineering internships at the [Hong Kong Productivity Council](https://www.hkpc.org/en). Currently leading the power unit subsystem for a Mars Rover Swarm Robot and serving as Secretary of [Imperial Entrepreneurs](https://www.imperialentrepreneurs.com). I am interested in early-stage startup environments and deep-tech.",
+    "Penultimate-year MEng Mechanical Engineering student at Imperial College London building across robotics, electronics, power systems, and climate tech. I interned at Imperial's [Electrochemical Science and Engineering Group](https://www.linkedin.com/company/ese-imperial) working on lithium-ion battery research, conducted climate finance research at the [Centre for Climate Finance & Investment](https://www.imperial.ac.uk/business-school/faculty-research/research-centres/centre-climate-finance-investment/), and completed engineering internships at the [Hong Kong Productivity Council](https://www.hkpc.org/en). Currently leading the power unit subsystem for a Mars Rover Swarm Robot and serving as Secretary of [Imperial Entrepreneurs](https://www.imperialentrepreneurs.com)",
   avatarUrl: "/me.jpeg",
   skills: [
     { name: "React", icon: ReactLight },
@@ -76,19 +76,19 @@ export const DATA = {
       badges: [],
       location: "London, UK",
       title: "Researcher",
-      logoUrl: "/ccfi.png",
+      logoUrl: "/ccfi.jpg",
       start: "August 2025",
       end: "September 2025",
       description:
         "Authored a 42-page research study based on interviews with C-suite executives and analysis of 30+ academic and institutional sources on technology developments in the $4B+ voluntary carbon market; presented findings at the Laidlaw Scholars Annual Conference. Evaluated blockchain tokenization protocols, digital MRV systems, and AI applications for carbon credit verification while analyzing adoption barriers including energy consumption, governance challenges, and market fragmentation risks. Developed policy recommendations for market standardisation, addressing voluntary-compliance market convergence through integrity frameworks and technology-driven quality differentiation.",
     },
     {
-      company: "Electrochemical Engineering Group, Imperial College London",
+      company: "Electrochemical Science and Engineering Group, Imperial College London",
       href: "https://www.imperial.ac.uk",
       badges: [],
       location: "London, UK",
       title: "Battery Engineering Intern",
-      logoUrl: "/imperial.png",
+      logoUrl: "/ese.jpg",
       start: "June 2025",
       end: "July 2025",
       description:
@@ -112,16 +112,16 @@ export const DATA = {
       school: "Imperial College London",
       href: "https://www.imperial.ac.uk",
       degree:
-        "MEng Mechanical Engineering — Predicted First Class Honours | 2x Merit-based Scholarship (HKSES & Laidlaw Foundation)",
-      logoUrl: "/imperial.png",
+        "MEng Mechanical Engineering - Predicted First Class Honours | 2x Merit-based Scholarship (HKSES & Laidlaw Foundation)",
+      logoUrl: "/imperial.svg",
       start: "2023",
       end: "2027",
     },
     {
       school: "HKCCCU Logos Academy",
-      href: "https://www.logosacademy.edu.hk",
+      href: "https://logos.edu.hk/",
       degree: "International Baccalaureate Diploma (43/45)",
-      logoUrl: "/logos.png",
+      logoUrl: "/ib.png",
       start: "2021",
       end: "2023",
     },
@@ -183,7 +183,13 @@ export const DATA = {
       description:
         "Built a decentralised EEG data acquisition and biomarker accessibility platform powered by federated learning in 36 hours at the Entrepreneurs First London Neurotech Hackathon. Awarded 1st runner-up.",
       technologies: ["Federated Learning", "EEG", "Python", "Biomedical Signal Processing"],
-      links: [],
+      links: [
+        {
+          type: "Demo",
+          href: "https://youtu.be/yteoJ_pJuIk",
+          icon: <Icons.youtube className="size-3" />,
+        },
+      ],
       image: "",
       video: "",
     },
@@ -209,7 +215,13 @@ export const DATA = {
         "Built NeuronML — a decentralised EEG data acquisition and biomarker accessibility platform powered by federated learning in 36 hours.",
       win: "1st Runner-up",
       image: "",
-      links: [],
+      links: [
+        {
+          title: "Demo on YouTube",
+          icon: <Icons.youtube className="h-4 w-4" />,
+          href: "https://youtu.be/yteoJ_pJuIk",
+        },
+      ],
     },
     {
       title: "Secretary — Imperial Entrepreneurs",
