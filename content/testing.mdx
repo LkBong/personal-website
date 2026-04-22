@@ -1,0 +1,268 @@
+---
+title: "Data Science Workflow for Kaggle"
+publishedAt: "2025-11-21"
+updatedAt: "2026-04-22"
+author: "Joshua Ho"
+summary: "A structured, non-linear workflow for approaching Kaggle data science problems — from problem definition through feature engineering, model training, and ensemble methods."
+image: ""
+---
+
+# Data Science Workflow for Kaggle
+
+Adapted from: [Titanic Data Science Solutions](https://www.kaggle.com/code/startupsci/titanic-data-science-solutions#Workflow-stages)
+
+> **Note 1:** Stages should by no means be linear, but intend to explain the general workflow.
+> **Note 2:** There is no distinction between testing and validation in this workflow.
+
+## Workflow Stages
+
+1. Question or problem definition
+2. Acquire training and testing data
+3. Wrangle, prepare, cleanse the data
+4. Analyze, identify patterns, and explore the data
+5. Model, predict and solve the problem
+6. Visualize, report, and present the problem solving steps and final solution
+7. Supply or submit the results
+
+---
+
+## General Tools
+
+### For Dataframe Handling
+
+1. Pandas
+2. NumPy
+3. `re` (regex)
+4. `sklearn` (scikit-learn)
+
+### For Visualization
+
+1. Matplotlib
+2. Seaborn (as `sns`) — built on top of Matplotlib
+
+---
+
+## Preliminaries: Understanding the Purpose of Data Science — the 7Cs
+
+1. **Classification**: categorize samples
+2. **Correlate**: find significance between variables
+3. **Converting** and **Creating**: of (often new) variables for correlation, conversion, or completeness goals
+4. **Correcting** and **Completing**: correcting typos (words/numbers), completing through imputation
+5. **Charting**: use the right visualizations
+
+Most of the time we **observe**, then point towards a **decision**, achieving these purposes in a non-linear fashion.
+
+---
+
+## Step 1: Question/Problem Definition
+
+Understand the problem at hand. In general, it requires answering:
+
+> Knowing from a **training set** of samples containing *\[some known information\]*, can our model determine, based on a given **test dataset** ***NOT*** containing the known information, the *\[information to be tested\]*?
+
+---
+
+## Step 2: Acquiring the Data
+
+```python
+train_df = pd.read_csv('../path-to-train-csv')
+test_df = pd.read_csv('../path-to-test-csv')
+```
+
+---
+
+## Step 3: Preliminary Analysis of Data
+
+Ask yourself:
+
+1. **What types of data exist?**
+   - How many categorical vs numerical variables?
+   - **Categorical** variables could be: *normal, ordinal, ratio, or interval-based*
+   - **Numerical** variables can be *continuous or discrete*
+   - **Mixed data?** e.g. ticket codes like `C03` — what does the prefix imply? Possibly seating distance from exit, which might correlate with survival (a **Correlate** goal)
+2. **What features may contain typos or errors?**
+
+### Code Implementation
+
+```python
+# Check column names
+train_df.columns.values
+
+# General features: null counts, dtypes
+train_df.info(verbose=True)
+# Distributions and general stats
+train_df.describe(verbose=True)
+
+# Categorical data statistics
+train_df.describe(include=['O'])
+
+# Preview data
+train_df.head()  # or .tail(n)
+```
+
+The **Pearson correlation** is also very important — Matplotlib + Seaborn make this easy:
+
+```python
+colormap = plt.cm.RdBu
+plt.figure(figsize=(14, 12))
+plt.title('Pearson Correlation of Features', y=1.05, size=15)
+sns.heatmap(train.astype(float).corr(), linewidths=0.1, vmax=1.0,
+            square=True, cmap=colormap, linecolor='white', annot=True)
+```
+
+Reference: [Introduction to Ensembling/Stacking in Python](https://www.kaggle.com/code/arthurtok/introduction-to-ensembling-stacking-in-python)
+
+---
+
+## Step 4: Write Down Assumptions Based on Preliminary Analysis
+
+> **Note:** We will always return to Step 4 during Step 5.
+
+- **Correlating**: ask yourself what is the ***dependent variable*** you want to compare results against. Match quick correlations early.
+- **Completing**: what features do you want to complete? What do you want to drop?
+- **Correcting**: what features do you want to drop and why? Potential reasons:
+  1. The feature cannot contribute to what we're predicting
+  2. Too incomplete (too many typos or incorrect values)
+- **Creating**: why convert continuous values into ordinal integers (e.g. age, fare)?
+  - Easier visualization in groups/bins — no meaningful reason to distinguish a 15-year-old from a 17-year-old in survival analysis
+  - Optimizes gradient descent
+
+---
+
+## Step 5: Intermediate Analysis
+
+**Strategy 5.1** — Pivot features against each other via tables or graphs:
+
+```python
+train_df[['Pclass', 'Survived']].groupby(['Pclass'], as_index=False).mean().sort_values(by='Survived', ascending=False)
+```
+
+**Strategy 5.2** — Visualize data, then make decisions:
+
+> e.g. (observe) infants (Age &lt;= 4) seem to have a higher survival rate by looking at graphs → (decision) we should complete "Age" in our model
+
+```python
+g = sns.FacetGrid(train_df, col='Survived')
+g.map(plt.hist, 'Age', bins=20)
+```
+
+---
+
+## Step 6: Data Wrangling
+
+1. **Extract useful information from alphanumerical values**
+
+   e.g. `"Mr. Jonathan CHAN"` → the title `"Mr."` infers gender, marital status, and age range; the name itself is not useful.
+
+2. **Modify text/numbers**
+
+```python
+for dataset in combined:
+    dataset['Title'] = dataset['Title'].replace(
+        ['Lady', 'Countess', 'Capt', 'Col', 'Don', 'Dr',
+         'Major', 'Rev', 'Sir', 'Jonkheer', 'Dona'],
+        'Rare'
+    )
+```
+
+3. **Conduct imputation** (for the Completing step)
+
+```python
+# Quick method: fillna with median
+train_df['Fare'].fillna(test_df['Fare'].dropna().median(), inplace=True)
+
+# More accurate: use median per combination of correlated features
+# e.g. speculate mean age depends on Pclass and Sex
+guess_ages = np.zeros((2, 3))
+for dataset in combine:
+    # combine = [X_full, X_test_full]
+    for i in range(0, len(guess_ages[0])):
+        for j in range(0, len(guess_ages[1])):
+            guess_df = dataset[(dataset['Sex'] == i) & (dataset['Pclass'] == j+1)]['Age'].dropna()
+            guess_ages[i, j] = int(guess_df.median() / 0.5 + 0.5) * 0.5
+```
+
+4. **Drop redundant features**
+
+   Rule of thumb: if Pearson correlation between two features is high, there are likely redundancies — consider combining them or removing one.
+
+   e.g. `FamilySize = SibSp + Parch + 1`
+
+5. **Create artificial features**
+
+   Useful for capturing interactions that individual raw features don't express on their own.
+
+---
+
+## Step 7: Model, Predict, and Solve
+
+Narrow down estimators based on:
+1. The **nature of the problem** (classification vs regression)
+2. The **type of machine learning** (supervised vs unsupervised)
+
+Scikit-learn provides a comprehensive [algorithm cheatsheet](https://scikit-learn.org/stable/machine_learning_map.html).
+
+### Estimators in Scikit-learn
+
+- **Linear Models** — Linear/Logistic Regression, Ridge, Lasso, ElasticNet, SGDClassifier
+- **Support Vector Machines** — `SVC`, `SVR`, `LinearSVC`, `LinearSVR`
+- **Tree-Based Methods** — DecisionTree, RandomForest, ExtraTrees, GradientBoosting, [XGBoost](https://xgboost.readthedocs.io/en/latest/), HistGradientBoosting
+- **Nearest Neighbors** — KNeighbors, RadiusNeighbors
+- **Naive Bayes** — GaussianNB, MultinomialNB, BernoulliNB, CategoricalNB
+- **Discriminant Analysis** — LinearDA, QuadraticDA
+- **Ensemble Methods** — Bagging, AdaBoost, Stacking, Voting
+- **Neural Networks (Shallow)** — MLPClassifier, MLPRegressor
+- **Probabilistic Models** — GaussianProcessClassifier/Regressor
+
+### Code Implementation
+
+**Split into train and test:**
+
+```python
+X_train = train_df.drop("Survived", axis=1)
+Y_train = train_df["Survived"]
+X_test  = test_df.drop("PassengerId", axis=1).copy()
+X_train.shape, Y_train.shape, X_test.shape
+```
+
+**Model fitting workflow:**
+
+1. Choose model (選擇模型)
+2. Choose (hyper)parameters (超參數)
+3. Set up cross-validation using `KFold` and `cross_val_score`
+   - Fit `X_train` and `Y_train`
+4. Obtain prediction
+5. Obtain prediction score
+6. Adjust model via hyperparameter tuning: grid search, Bayesian optimization, etc.
+
+```python
+logreg = LogisticRegression()
+logreg.fit(X_train, Y_train)
+Y_pred = logreg.predict(X_test)
+acc_log = round(logreg.score(X_train, Y_train) * 100, 2)
+acc_log
+```
+
+---
+
+### Advanced: Ensemble Methods
+
+There are 3 types of ensemble methods: Bagging, Boosting, and Stacking.
+
+#### 1. Bagging (Bootstrap Aggregating)
+
+- A group of **weak learners** combine to form a **strong learner** that is less prone to overfitting, with lower variance.
+- Models are trained **in parallel**.
+- Regression: predictions are averaged. Classification: predictions use majority vote.
+- Types: instance-based bagging, attribute-based bagging.
+
+#### 2. Boosting
+
+Models are trained **sequentially** rather than in parallel. Each successive model corrects the errors of the previous one.
+
+#### 3. Stacking
+
+- Combines **different types of models**, each trained separately on the same data.
+- Individual predictions from each base model serve as inputs to a **meta-model**, which learns to weigh and combine base model outputs as if they were data instances.
+
+Reference: [Introduction to Ensembling/Stacking in Python](https://www.kaggle.com/code/arthurtok/introduction-to-ensembling-stacking-in-python)
