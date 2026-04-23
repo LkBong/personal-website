@@ -89,8 +89,8 @@ export function ProjectCard({
               <Link
                 href={link.href}
                 key={idx}
-                target="_blank"
-                rel="noopener noreferrer"
+                target={link.href.startsWith("/") ? "_self" : "_blank"}
+                rel={link.href.startsWith("/") ? undefined : "noopener noreferrer"}
                 onClick={(e) => e.stopPropagation()}
               >
                 <Badge
