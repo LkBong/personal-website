@@ -31,6 +31,9 @@ export const DATA = {
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
     { href: "/blog", icon: NotebookIcon, label: "Blog" },
+    { href: "https://linkedin.com/in/joshua-holb", icon: Icons.linkedin, label: "LinkedIn" },
+    { href: "https://x.com", icon: Icons.x, label: "X" },
+    { href: "https://youtube.com", icon: Icons.youtube, label: "YouTube" },
   ],
   contact: {
     email: "joshuahlb12@gmail.com",
