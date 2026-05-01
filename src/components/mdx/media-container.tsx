@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 
 interface MediaContainerProps {
-  src: float;
+  src: string;
   alt?: string;
   type?: "image" | "video";
   className?: string;
