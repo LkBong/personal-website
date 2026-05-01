@@ -18,7 +18,7 @@ export const mdxComponents = {
         style={{
           maskImage:
             "linear-gradient(90deg, transparent, black 8%, black 92%, transparent)",
-          WebkitMpreaskImage:
+          WebkitMaskImage:
             "linear-gradient(90deg, transparent, black 8%, black 92%, transparent)",
         }}
       />
