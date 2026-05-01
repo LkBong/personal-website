@@ -24,17 +24,26 @@ export default function ContactSection() {
           Get in Touch
         </h2>
         <p className="mx-auto max-w-lg text-muted-foreground text-balance">
-          Want to chat? Just shoot me a dm{" "}
+          Want to chat? Shoot me a message on
+          {" "}
           <Link
-            href={DATA.contact.social.X.url}
+            href="https://www.linkedin.com/joshua-holb"
             target="_blank"
             rel="noopener noreferrer"
             className="text-blue-500 hover:underline underline-offset-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-sm"
           >
-            with a direct question on twitter
-          </Link>{" "}
-          and I&apos;ll respond whenever I can. I will ignore all
-          soliciting.
+            LinkedIn
+          </Link>
+          {" "}or email me at
+          {" "}
+          <a
+            href="mailto:joshuahlb12@gmail.com"
+            className="text-blue-500 hover:underline underline-offset-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-sm"
+          >
+            joshuahlb12@gmail.com
+          </a>
+          {" "}for collaboration or any discussion - I like my brain picked
+          (gently) ~
         </p>
       </div>
     </div>

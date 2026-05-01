@@ -1,4 +1,4 @@
-import { GlobeIcon, MailIcon } from "lucide-react";
+import { GlobeIcon, MailIcon, PresentationIcon } from "lucide-react";
 
 export type IconProps = React.HTMLAttributes<SVGElement>;
 
@@ -173,6 +173,7 @@ export const Icons = {
       />
     </svg>
   ),
+  googleSlides: (props: IconProps) => <PresentationIcon {...props} />,
   whatsapp: (props: IconProps) => (
     <svg
       xmlns="http://www.w3.org/2000/svg"

@@ -38,3 +38,10 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 .content-collections
+
+/backup-*
+/personal-info
+
+.settings.local.json
+
+CLAUDE.md

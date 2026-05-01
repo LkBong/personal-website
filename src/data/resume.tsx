@@ -80,7 +80,7 @@ export const DATA = {
       start: "August 2025",
       end: "September 2025",
       description:
-        "Authored a 42-page research study based on interviews with C-suite executives and analysis of 30+ academic and institutional sources on technology developments in the $4B+ voluntary carbon market; presented findings at the Laidlaw Scholars Annual Conference. Evaluated blockchain tokenization protocols, digital MRV systems, and AI applications for carbon credit verification while analyzing adoption barriers including energy consumption, governance challenges, and market fragmentation risks. Developed policy recommendations for market standardisation, addressing voluntary-compliance market convergence through integrity frameworks and technology-driven quality differentiation.",
+        "Authored research study based on interviews with C-suite executives and analysis of 30+ academic and institutional sources on technology developments in the voluntary carbon market; Findings were presented at at the Laidlaw Scholars Annual Conference. Evaluated blockchain tokenization protocols, digital MRV systems, and AI applications for carbon credit verification while analyzing adoption barriers including energy consumption, governance challenges, and market fragmentation risks. Developed policy recommendations for market standardisation, addressing voluntary-compliance market convergence through integrity frameworks and technology-driven quality differentiation.",
     },
     {
       company: "Electrochemical Science and Engineering Group, Imperial College London",
@@ -104,7 +104,7 @@ export const DATA = {
       start: "July 2024",
       end: "August 2024",
       description:
-        "Conducted CFD analysis using Ansys Fluent for a biscuit manufacturing line, optimising airflow efficiency. Designed a pressure-assisted thawing system for Tyson Foods, improving defrosting time by up to 280% and eliminating dead spots to ensure uniform temperature distribution. Supported tender evaluation and technical due diligence for a large-scale automated central kitchen project designed to produce up to 10 million meals annually for community distribution in Hong Kong.",
+        "Conducted CFD analysis using Ansys Fluent for a biscuit manufacturing line, optimising airflow efficiency; designed a pressure-assisted thawing system for Tyson Foods, improving defrosting time % and eliminating dead spots to ensure uniform temperature distribution. Supported tender evaluation and technical due diligence for the Food Angel automated central kitchen project designed to produce up to 10 million meals annually for community distribution in Hong Kong.",
     },
   ],
   education: [
@@ -128,19 +128,19 @@ export const DATA = {
   ],
   projects: [
     {
-      title: "Mars Rover Swarm Robot — Power Unit",
+      title: "Mars Rover Swarm Robot - Power Unit",
       href: "",
       dates: "Oct 2025 - Present",
       active: true,
       description:
-        "Engineered a compact BLDC-driven power unit with four-quadrant control, integrating PCB and veroboard electronics for -40°C operation, bidirectional actuation, and IP68-rated enclosure. Optimized component manufacturability by applying tolerance stack-ups, material selection, and machining constraints. Led a subsystem team of 4, defining interface specifications and managing client-facing engineering reviews.",
+        "Engineered a compact BLDC-driven power unit with four-quadrant control, integrating PCB and veroboard electronics for -40°C operation, bidirectional actuation, and IP68-rated enclosure.",
       technologies: ["BLDC Motor Control", "PCB Design", "KiCad", "Embedded C", "IP68"],
       links: [],
       image: "",
       video: "",
     },
     {
-      title: "Battery Pack Design — Imperial Racing Green",
+      title: "Battery Pack Design - Imperial Racing Green",
       href: "",
       dates: "Oct 2023 - May 2025",
       active: false,
@@ -157,31 +157,38 @@ export const DATA = {
       dates: "Oct 2024 - May 2025",
       active: false,
       description:
-        "Partnered with New Scientist and the LEGO Group to design a user-centric, ergonomic, and sustainable motorized rope bridge. Led transmission system design and selection, covering power source sizing, material specification, and FMEA including shaft failure assessment and mitigation strategies.",
+        "Partnered with New Scientist and the LEGO Group to design a user-centric, ergonomic, and sustainable motorized rope bridge model (scaled down proportionally)",
       technologies: ["SOLIDWORKS", "FMEA", "Transmission Design", "Power Systems"],
       links: [],
-      image: "",
+      image: "/projects/ropebridge.png",
       video: "",
     },
     {
-      title: "Migraine Relief Headband",
+      title: "Nutribetics",
       href: "",
-      dates: "Jan 2025 - Feb 2025",
+      dates: "2025",
       active: false,
       description:
-        "Developed conceptual design for an acupressure-based migraine relief headband for biomedical sciences researchers at Brunel University, as external engineering design consultants. Led power supply system design, ensuring reliable and user-safe operation.",
-      technologies: ["Product Design", "Biomedical Engineering", "Power Systems"],
-      links: [],
+        "AI-powered mobile app for Type 2 Diabetes dietary management, built at the Royal Society of Medicine 2-day digital healthcare hackathon. Features a multi-agent pipeline -- nutrition advisor, recipe selector, ingredient extractor, and a GPT-4o + Selenium GUI agent that autonomously navigates Sainsbury's to fill your shopping cart.",
+      technologies: ["GPT-4o", "Selenium", "Python", "Flask", "Multi-Agent Systems", "Healthcare AI"],
+      links: [
+        {
+          type: "Demo",
+          href: "https://youtu.be/VK2fOgdYDKo",
+          icon: <Icons.youtube className="size-3" />,
+        },
+      ],
       image: "",
       video: "",
     },
+
     {
       title: "NeuronML",
       href: "",
       dates: "Jan 2025",
       active: false,
       description:
-        "Built a decentralised EEG data acquisition and biomarker accessibility platform powered by federated learning in 36 hours at the Entrepreneurs First London Neurotech Hackathon. Awarded 1st runner-up.",
+        "Federated learning powered EEG data acquisition and biomarker accessibility platform built at the Entrepreneurs First London Neurotech Hackathon in London, UK - 1st Runner-up.",
       technologies: ["Federated Learning", "EEG", "Python", "Biomedical Signal Processing"],
       links: [
         {
@@ -194,25 +201,32 @@ export const DATA = {
       video: "",
     },
     {
-      title: "Self-Navigating Vehicle",
-      href: "",
+      title: "LiDAR for SLAM on 4WD",
+      href: "https://docs.google.com/presentation/d/1YvfSqdTOKUW3f16jhvHcaAyw85-_XcRq/edit?usp=sharing&ouid=116791244327760298869&rtpof=true&sd=true",
       dates: "Jan 2023 - Mar 2023",
       active: false,
       description:
-        "Assembled a four-wheel autonomous navigation platform using RGB-D sensors, LiDAR, and SLAM algorithms implemented in ROS at HK Polytechnic University. Tuned sensor fusion and navigation parameters to improve localization accuracy and stability for indoor deployment in a simulated restaurant environment.",
+        "Assembly and tuning of TurtleBot with LiDAR sensors for simultaneous localization and mapping (SLAM) at HK Polytechnic University.",
       technologies: ["ROS", "LiDAR", "SLAM", "RGB-D Sensing", "Python"],
-      links: [],
-      image: "",
+      links: [
+        {
+          type: "Slides",
+          href: "https://docs.google.com/presentation/d/1YvfSqdTOKUW3f16jhvHcaAyw85-_XcRq/edit?usp=sharing&ouid=116791244327760298869&rtpof=true&sd=true",
+          icon: <Icons.googleSlides className="size-3" />,
+        }
+      ], 
+      image: "/projects/lidar.png",
       video: "",
     },
   ],
+  /*
   hackathons: [
     {
       title: "EF London Neurotech Hackathon",
       dates: "January 2025",
       location: "London, UK",
       description:
-        "Built NeuronML — a decentralised EEG data acquisition and biomarker accessibility platform powered by federated learning in 36 hours.",
+        "Built NeuronML - a decentralised EEG data acquisition and biomarker accessibility platform powered by federated learning in 36 hours.",
       win: "1st Runner-up",
       image: "",
       links: [
@@ -224,26 +238,27 @@ export const DATA = {
       ],
     },
   ],
+  */
   otherResponsibilities: [
     {
       company: "Imperial Entrepreneurs",
-      href: "https://www.imperialentrepreneurs.com",
+      href: "https://www.linkedin.com/company/imperial-entrepreneurs/",
       badges: [],
       location: "London, UK",
-      title: "Secretary",
-      logoUrl: "",
+      title: "Partnerships Lead (and ex-Secretary)",
+      logoUrl: "/orgs/icentre.png",
       start: "July 2025",
       end: "Present",
       description:
-        "Scaled London's hardware and deep tech ecosystem by delivering 46 events in 5 months, partnering with organisations including Google, Entrepreneur First, and EWOR, engaging 1000+ members and supporting the IdeaForge incubator programme.",
+        "Supporting the student entrepreneurship ecosystem around Imperial through incubator, events, hackathons, with food as secondary incentives!",
     },
     {
       company: "HKSES Student Association",
-      href: "",
+      href: "https://www.linkedin.com/company/hong-kong-scholarship-for-excellence-scheme-scholars-association/",
       badges: [],
       location: "Hong Kong",
       title: "Secretary",
-      logoUrl: "",
+      logoUrl: "/orgs/sessa.png",
       start: "September 2024",
       end: "Present",
       description:
@@ -255,7 +270,7 @@ export const DATA = {
       badges: [],
       location: "London, UK / Rwanda",
       title: "Vice President",
-      logoUrl: "",
+      logoUrl: "/orgs/equinox.png",
       start: "October 2024",
       end: "June 2025",
       description:
