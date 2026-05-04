@@ -123,7 +123,7 @@ export const DATA = {
     {
       school: "HKCCCU Logos Academy",
       href: "https://logos.edu.hk/",
-      degree: "International Baccalaureate Diploma (43/45)",
+      degree: "International Baccalaureate Diploma - fun fact: my exam journey was filmed by RTHK, Hong Kong's sole public service broadcaster into an episode and broadcasted to live TV viewers plus 400k+ other YouTube viewers, that included my results reaction (it didin't occur to me how much's at stake during it until afterwards, I'm glad it worked out alright)",
       logoUrl: "/ib.png",
       start: "2021",
       end: "2023",
@@ -139,7 +139,7 @@ export const DATA = {
         "Engineered a compact BLDC-driven power unit with four-quadrant control, integrating PCB and veroboard electronics for -40°C operation, bidirectional actuation, and IP68-rated enclosure.",
       technologies: ["BLDC Motor Control", "PCB Design", "KiCad", "Embedded C", "IP68"],
       links: [],
-      image: "",
+      image: "/projects/memaro.png",
       video: "",
     },
     {
@@ -151,7 +151,7 @@ export const DATA = {
         "Designed and integrated a 2P5S Li-ion battery pack contributing to 434.4 km/kWh efficiency and 2nd place in Carbon Footprint Reduction at Shell Eco-Marathon 2025. Engineered and fabricated a modular transport table work surface for team vehicle maintenance.",
       technologies: ["Li-ion Battery Design", "SOLIDWORKS", "Shell Eco-Marathon 2025"],
       links: [],
-      image: "",
+      image: "/projects/bpack.png",
       video: "",
     },
     {
@@ -172,7 +172,7 @@ export const DATA = {
       dates: "2025",
       active: false,
       description:
-        "AI-powered mobile app for Type 2 Diabetes dietary management, built at the Royal Society of Medicine 2-day digital healthcare hackathon. Features a multi-agent pipeline -- nutrition advisor, recipe selector, ingredient extractor, and a GPT-4o + Selenium GUI agent that autonomously navigates Sainsbury's to fill your shopping cart.",
+        "Mobile app for Type 2 Diabetes dietary management, built at the Royal Society of Medicine 2-day digital healthcare hackathon. Features a multi-agent pipeline -- nutrition advisor, recipe selector, ingredient extractor, and a GPT-4o + Selenium GUI agent that autonomously navigates Sainsbury's to fill your shopping cart, getting things directly to your doorstep! (On second thought 2 months on, wouldn't this discourage doing ones groceries as an exercise? anyways ...)",
       technologies: ["GPT-4o", "Selenium", "Python", "Flask", "Multi-Agent Systems", "Healthcare AI"],
       links: [
         {
@@ -181,7 +181,7 @@ export const DATA = {
           icon: <Icons.youtube className="size-3" />,
         },
       ],
-      image: "",
+      image: "/projects/nutribetics.png",
       video: "",
     },
 
@@ -200,7 +200,7 @@ export const DATA = {
           icon: <Icons.youtube className="size-3" />,
         },
       ],
-      image: "",
+      image: "/projects/neuronml.png",
       video: "",
     },
     {
@@ -269,7 +269,7 @@ export const DATA = {
     },
     {
       company: "Imperial e.quinox",
-      href: "",
+      href: "https://uk.linkedin.com/company/e.quinox",
       badges: [],
       location: "London, UK / Rwanda",
       title: "Vice President",
@@ -277,7 +277,7 @@ export const DATA = {
       start: "October 2024",
       end: "June 2025",
       description:
-        "Led a 4-member team to design and deploy a rainwater harvesting system in rural Rwanda, translating insights from 300+ community surveys into system requirements in collaboration with regional governments.",
+        "Led a 4-member team to design and deploy a rainwater harvesting system in rural Rwanda, conducting community surveys on-site and translating them into system requirements in collaboration with regional governments.",
     },
   ],
 } as const;
