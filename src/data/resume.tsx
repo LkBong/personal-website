@@ -151,7 +151,7 @@ export const DATA = {
         "Designed and integrated a 2P5S Li-ion battery pack contributing to 434.4 km/kWh efficiency and 2nd place in Carbon Footprint Reduction at Shell Eco-Marathon 2025. Engineered and fabricated a modular transport table work surface for team vehicle maintenance.",
       technologies: ["Li-ion Battery Design", "SOLIDWORKS", "Shell Eco-Marathon 2025"],
       links: [],
-      image: "/projects/bpack.png",
+      image: "/projects/bpack.jpg",
       video: "",
     },
     {
