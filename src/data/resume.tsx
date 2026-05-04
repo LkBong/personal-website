@@ -49,19 +49,19 @@ export const DATA = {
         name: "LinkedIn",
         url: "https://linkedin.com/in/joshua-holb",
         icon: Icons.linkedin,
-        navbar: true,
+        navbar: false,
       },
       X: {
         name: "X",
         url: "https://x.com",
         icon: Icons.x,
-        navbar: true,
+        navbar: false,
       },
       Youtube: {
         name: "Youtube",
         url: "https://youtube.com",
         icon: Icons.youtube,
-        navbar: true,
+        navbar: false,
       },
       email: {
         name: "Send Email",
