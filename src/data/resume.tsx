@@ -33,7 +33,7 @@ export const DATA = {
     { href: "/blog", icon: NotebookIcon, label: "Blog" },
     { href: "https://linkedin.com/in/joshua-holb", icon: Icons.linkedin, label: "LinkedIn" },
     { href: "https://x.com", icon: Icons.x, label: "X" },
-    { href: "https://youtube.com", icon: Icons.youtube, label: "YouTube" },
+    { href: "https://www.youtube.com/@joshuaho4456", icon: Icons.youtube, label: "YouTube" },
   ],
   contact: {
     email: "joshuahlb12@gmail.com",
@@ -59,7 +59,7 @@ export const DATA = {
       },
       Youtube: {
         name: "Youtube",
-        url: "https://youtube.com",
+        url: "https://www.youtube.com/@joshuaho4456",
         icon: Icons.youtube,
         navbar: false,
       },
