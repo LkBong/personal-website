@@ -57,7 +57,7 @@ export function ProjectCard({
   return (
     <div
       className={cn(
-        "flex flex-col h-full border border-border rounded-xl overflow-hidden hover:ring-2 cursor-pointer hover:ring-muted transition-all duration-200",
+        "flex flex-col h-full border border-border bg-card rounded-xl overflow-hidden hover:ring-2 cursor-pointer hover:ring-primary/30 hover:border-primary/30 hover:-translate-y-0.5 transition-all duration-200",
         className
       )}
     >
@@ -94,7 +94,7 @@ export function ProjectCard({
                 onClick={(e) => e.stopPropagation()}
               >
                 <Badge
-                  className="flex items-center gap-1.5 text-xs bg-black text-white hover:bg-black/90"
+                  className="flex items-center gap-1.5 text-xs bg-primary text-primary-foreground hover:bg-primary/90 shadow-sm"
                   variant="default"
                 >
                   {link.icon}

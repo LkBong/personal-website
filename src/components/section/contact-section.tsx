@@ -11,6 +11,8 @@ export default function ContactSection() {
       <div className="absolute inset-0 top-0 left-0 right-0 h-1/2 rounded-xl overflow-hidden">
         <FlickeringGrid
           className="h-full w-full"
+          color="var(--primary)"
+          maxOpacity={0.35}
           squareSize={2}
           gridGap={2}
           style={{
@@ -30,7 +32,7 @@ export default function ContactSection() {
             href="https://www.linkedin.com/joshua-holb"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-500 hover:underline underline-offset-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-sm"
+            className="font-medium text-primary hover:underline underline-offset-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-sm"
           >
             LinkedIn
           </Link>
@@ -38,7 +40,7 @@ export default function ContactSection() {
           {" "}
           <a
             href="mailto:joshuahlb12@gmail.com"
-            className="text-blue-500 hover:underline underline-offset-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-sm"
+            className="font-medium text-primary hover:underline underline-offset-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-sm"
           >
             joshuahlb12@gmail.com
           </a>
