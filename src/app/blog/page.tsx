@@ -66,12 +66,12 @@ export default async function BlogPage({
                       className="flex items-start gap-x-2 group cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
                       href={`/blog/${slug}`}
                     >
-                      <span className="text-xs font-mono tabular-nums font-medium mt-[5px]">
+                      <span className="text-xs font-mono tabular-nums font-medium mt-[5px] text-primary/70">
                         {String(indexNumber).padStart(2, "0")}.
                       </span>
                       <div className="flex flex-col gap-y-2 flex-1">
                         <p className="tracking-tight text-lg font-medium">
-                          <span className="group-hover:text-foreground transition-colors">
+                          <span className="group-hover:text-primary transition-colors">
                             {post.title}
                             <ChevronRight
                               className="ml-1 inline-block size-4 stroke-3 text-muted-foreground opacity-0 -translate-x-2 transition-all duration-200 group-hover:opacity-100 group-hover:translate-x-0"
