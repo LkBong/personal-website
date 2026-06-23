@@ -15,7 +15,7 @@ export const DATA = {
   location: "London, UK",
   locationLink: "https://www.google.com/maps/place/London",
   description:
-    "Mechanical Engineering student at Imperial College London. Building deployable deep-tech systems across robotics, power systems, and climate tech.",
+    "welcome to my page ~", // TODO: add inline nav for different pages
   summary:
     "Penultimate-year MEng Mechanical Engineering student at Imperial College London building across robotics, electronics, power systems, and climate tech. I interned at Imperial's [Electrochemical Science and Engineering Group](https://www.linkedin.com/company/ese-imperial) working on lithium-ion battery research, conducted climate finance research at the [Centre for Climate Finance & Investment](https://www.imperial.ac.uk/business-school/faculty-research/research-centres/centre-climate-finance-investment/), and completed engineering internships at the [Hong Kong Productivity Council](https://www.hkpc.org/en). Currently leading the power unit subsystem for a Mars Rover Swarm Robot and serving as Secretary of [Imperial Entrepreneurs](https://www.imperialentrepreneurs.com)",
   avatarUrl: "/me.jpeg",
@@ -123,7 +123,7 @@ export const DATA = {
     {
       school: "HKCCCU Logos Academy",
       href: "https://logos.edu.hk/",
-      degree: "International Baccalaureate Diploma - fun fact: my exam journey was filmed by RTHK, Hong Kong's sole public service broadcaster into an episode and broadcasted to live TV viewers plus 400k+ other YouTube viewers, that included my results reaction (it didin't occur to me how much's at stake during it until afterwards, I'm glad it worked out alright)",
+      degree: "International Baccalaureate Diploma - fun fact (storytime!): my exam journey was filmed by RTHK, Hong Kong's sole public service broadcaster into an episode and broadcasted to live TV viewers plus 400k+ other YouTube viewers, that included my results reaction (it didin't occur to me how much's at stake during it until afterwards, I'm glad it worked out alright)",
       logoUrl: "/ib.png",
       start: "2021",
       end: "2023",
