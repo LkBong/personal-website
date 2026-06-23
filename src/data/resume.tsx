@@ -1,12 +1,12 @@
 import { Icons } from "@/components/icons";
-import { HomeIcon, NotebookIcon } from "lucide-react";
-import { ReactLight } from "@/components/ui/svgs/reactLight";
-import { NextjsIconDark } from "@/components/ui/svgs/nextjsIconDark";
-import { Typescript } from "@/components/ui/svgs/typescript";
-import { Python } from "@/components/ui/svgs/python";
-import { Csharp } from "@/components/ui/svgs/csharp";
-import { Postgresql } from "@/components/ui/svgs/postgresql";
-import { Docker } from "@/components/ui/svgs/docker";
+import {
+  HomeIcon,
+  NotebookIcon,
+  Languages,
+  Cpu,
+  AppWindow,
+  NotebookPen,
+} from "lucide-react";
 
 export const DATA = {
   name: "Joshua Ho",
@@ -17,16 +17,56 @@ export const DATA = {
   description:
     "welcome to my (temporal) page", // TODO: add inline nav for different pages
   summary:
-    "\"creativity never comes from a single idea. It always comes from many ideas in combination, whether we recognize them or not.\" That line from Zigzag, a book I read in middle school, changed the way I see things. I've come to believe the world's most pressing problems rarely yield to a single discipline; they need a generalist who can stitch together tenuous, far-flung concepts into something that holds. I'm Joshua, an MEng Mechanical Engineering graduate building across robotics, electronics, power systems, and climate tech. All that work aside, nature's my true north, you might catch me trekking through the mountains of Spain in the middle of summer, or weaving through Hong Kong's jungle of buildings at midnight.",
+    "\"creativity never comes from a single idea. It always comes from many ideas in combination, whether we recognize them or not.\" That line from Zigzag, a book I read in middle school, changed the way I see things. I've come to believe the world's most pressing problems rarely yield to a single discipline; they need a generalist who can stitch together tenuous, far-flung concepts into something that holds. I'm Joshua, an BEng Mechanical Engineering graduate building deep-tech systems across robotics, power systems, and climate tech. All that work aside, nature's my true north, you might catch me trekking through the mountains of Spain in the middle of summer, or weaving through Hong Kong's jungle of buildings at midnight.",
   avatarUrl: "/me.jpeg",
   skills: [
-    { name: "React", icon: ReactLight },
-    { name: "Next.js", icon: NextjsIconDark },
-    { name: "TypeScript", icon: Typescript },
-    { name: "Python", icon: Python },
-    { name: "C", icon: Csharp },
-    { name: "PostgreSQL", icon: Postgresql },
-    { name: "Docker", icon: Docker },
+    {
+      category: "Languages",
+      icon: Languages,
+      items: [
+        "English (IELTS 8.0)",
+        "Cantonese (Native)",
+        "Mandarin (Proficient)",
+        "German (Beginner)",
+        "Japanese (Beginner)",
+      ],
+    },
+    {
+      category: "Computational, Simulation & Development",
+      icon: Cpu,
+      items: [
+        "SOLIDWORKS",
+        "Fusion 360",
+        "Abaqus",
+        "ANSYS Mechanical (FEA)",
+        "ANSYS Fluent",
+        "KiCad",
+        "Python",
+        "MATLAB",
+        "Simulink",
+        "C",
+        "JavaScript",
+        "TypeScript",
+        "React",
+        "Next.js",
+        "PostgreSQL",
+        "Docker",
+        "HTML",
+        "CSS",
+        "LaTeX",
+        "Git",
+      ],
+    },
+    {
+      category: "Other Software",
+      icon: AppWindow,
+      items: ["Adobe (Ai, Pr, Ae)", "MS Office (Associate Level)", "Figma", "Miro"],
+    },
+    {
+      category: "Note-taking",
+      icon: NotebookPen,
+      items: ["Obsidian", "Notion"],
+    },
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
