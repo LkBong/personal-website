@@ -15,9 +15,9 @@ export const DATA = {
   location: "London, UK",
   locationLink: "https://www.google.com/maps/place/London",
   description:
-    "Mechanical Engineering student at Imperial College London. Building deployable deep-tech systems across robotics, power systems, and climate tech.",
+    "welcome to my (temporal) page", // TODO: add inline nav for different pages
   summary:
-    "Penultimate-year MEng Mechanical Engineering student at Imperial College London building across robotics, electronics, power systems, and climate tech. I interned at Imperial's [Electrochemical Science and Engineering Group](https://www.linkedin.com/company/ese-imperial) working on lithium-ion battery research, conducted climate finance research at the [Centre for Climate Finance & Investment](https://www.imperial.ac.uk/business-school/faculty-research/research-centres/centre-climate-finance-investment/), and completed engineering internships at the [Hong Kong Productivity Council](https://www.hkpc.org/en). Currently leading the power unit subsystem for a Mars Rover Swarm Robot and serving as Secretary of [Imperial Entrepreneurs](https://www.imperialentrepreneurs.com)",
+    "\"creativity never comes from a single idea. It always comes from many ideas in combination, whether we recognize them or not.\" That line from Zigzag, a book I read in middle school, changed the way I see things. I've come to believe the world's most pressing problems rarely yield to a single discipline; they need a generalist who can stitch together tenuous, far-flung concepts into something that holds. I'm Joshua, an MEng Mechanical Engineering graduate building across robotics, electronics, power systems, and climate tech. All that work aside, nature's my true north, you might catch me trekking through the mountains of Spain in the middle of summer, or weaving through Hong Kong's jungle of buildings at midnight.",
   avatarUrl: "/me.jpeg",
   skills: [
     { name: "React", icon: ReactLight },
@@ -74,6 +74,17 @@ export const DATA = {
 
   work: [
     {
+      company: "Hong Kong Applied Science and Technology Research Institute (ASTRI)",
+      href: "https://www.astri.org",
+      badges: [],
+      location: "Hong Kong",
+      title: "Electronics Engineer",
+      logoUrl: "./orgs/astri.png",
+      start: "June 2026",
+      end: "Present",
+      description: "TBD",
+    },
+    {
       company: "Centre for Climate Finance & Investment",
       href: "https://www.imperial.ac.uk/centre-climate-finance-investment",
       badges: [],
@@ -123,7 +134,7 @@ export const DATA = {
     {
       school: "HKCCCU Logos Academy",
       href: "https://logos.edu.hk/",
-      degree: "International Baccalaureate Diploma - fun fact: my exam journey was filmed by RTHK, Hong Kong's sole public service broadcaster into an episode and broadcasted to live TV viewers plus 400k+ other YouTube viewers, that included my results reaction (it didin't occur to me how much's at stake during it until afterwards, I'm glad it worked out alright)",
+      degree: "International Baccalaureate Diploma - fun fact (storytime!): my exam journey was filmed by RTHK, Hong Kong's sole public service broadcaster into an episode and broadcasted to live TV viewers plus 400k+ other YouTube viewers, that included my results reaction (it didin't occur to me how much's at stake during it until afterwards, I'm glad it worked out alright)",
       logoUrl: "/ib.png",
       start: "2021",
       end: "2023",
@@ -138,7 +149,13 @@ export const DATA = {
       description:
         "Engineered a compact BLDC-driven power unit with four-quadrant control, integrating PCB and veroboard electronics for -40°C operation, bidirectional actuation, and IP68-rated enclosure.",
       technologies: ["BLDC Motor Control", "PCB Design", "KiCad", "Embedded C", "IP68"],
-      links: [],
+      links: [
+        {
+          type: "Demo",
+          href: "https://youtu.be/zNInn1zU4rg",
+          icon: <Icons.youtube className="size-3" />,
+        },
+      ],
       image: "/projects/memaro.png",
       video: "",
     },
@@ -265,7 +282,7 @@ export const DATA = {
       start: "September 2024",
       end: "Present",
       description:
-        "Executed 6 firm visits and career webinars with firms including HSBC and HKEX, driving engagement across a 600+ scholar community.",
+        "Hosting firm visits, career webinars, more light-hearted socials - driving engagement across a 600+ scholar community.",
     },
     {
       company: "Imperial e.quinox",
