@@ -16,8 +16,12 @@ export const DATA = {
   locationLink: "https://www.google.com/maps/place/London",
   description:
     "welcome to my (temporal) page", // TODO: add inline nav for different pages
+  quote: {
+    text: "creativity never comes from a single idea. It always comes from many ideas in combination, whether we recognize them or not.",
+    source: "Zigzag, a book I treasured in middle school",
+  },
   summary:
-    "\"creativity never comes from a single idea. It always comes from many ideas in combination, whether we recognize them or not.\" That line from Zigzag, a book I read in middle school, changed the way I see things. I've come to believe the world's most pressing problems rarely yield to a single discipline; they need a generalist who can stitch together tenuous, far-flung concepts into something that holds. I'm Joshua, an BEng Mechanical Engineering graduate building deep-tech systems across robotics, power systems, and climate tech. All that work aside, nature's my true north, you might catch me trekking through the mountains of Spain in the middle of summer, or weaving through Hong Kong's jungle of buildings at midnight.",
+    "I believe the world's most pressing problems are rarely solved inside a single discipline. They demand cross-pollination, ideas carried from one field and grafted onto another. Steve Jobs only arrived at Apple's typography because he wandered into a calligraphy class out of pure curiosity. The Shinkansen bullet train found its silent, efficient nose by studying the kingfisher. Velcro exists because George de Mestral looked closely at the burrs clinging to his dog. The best ideas tend to live at the seams between fields.\n\nI'm Joshua, a mechanical engineer by training, with hands-on experience across batteries, mechanical design, electronics, and full-stack software. I'm also a proud organiser for [Imperial Entrepreneurs](https://www.imperialentrepreneurs.com) and the [HKSES Scholars Association](https://www.linkedin.com/company/hong-kong-scholarship-for-excellence-scheme-scholars-association/).\n\nWork aside, nature is my true north. You might catch me trekking through the mountains of Spain in the height of summer, or weaving through Hong Kong's jungle of buildings at midnight.",
   avatarUrl: "/me.jpeg",
   skills: [
     {

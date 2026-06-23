@@ -41,9 +41,19 @@ export default function Page() {
         </div>
       </section>
       <section id="about">
-        <div className="flex min-h-0 flex-col gap-y-4">
+        <div className="flex min-h-0 flex-col gap-y-5">
           <BlurFade delay={BLUR_FADE_DELAY * 3}>
             <h2 className="flex items-center gap-2.5 text-xl font-bold before:h-5 before:w-1 before:rounded-full before:bg-primary before:content-['']">About</h2>
+          </BlurFade>
+          <BlurFade delay={BLUR_FADE_DELAY * 3.5}>
+            <figure className="rounded-xl border border-border bg-accent/30 px-5 py-4">
+              <blockquote className="text-pretty text-base font-medium italic leading-relaxed text-foreground/90 sm:text-lg">
+                &ldquo;{DATA.quote.text}&rdquo;
+              </blockquote>
+              <figcaption className="mt-2.5 text-sm text-muted-foreground">
+                <span className="text-primary">from</span> {DATA.quote.source}
+              </figcaption>
+            </figure>
           </BlurFade>
           <BlurFade delay={BLUR_FADE_DELAY * 4}>
             <div className="prose max-w-full text-pretty font-sans leading-relaxed text-muted-foreground dark:prose-invert">
